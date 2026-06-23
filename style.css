@@ -1,0 +1,116 @@
+/* Общий фон на всех страницах */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+/* Полупрозрачная подложка для читаемости текста */
+.container {
+    max-width: 900px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+/* ЗОЛОТЫЕ БУКВЫ */
+.gold-title,
+.gold-text {
+    color: #FFD700;
+    text-shadow: 0 0 10px #FF8C00, 0 0 20px #B8860B;
+}
+
+.gold-title {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.gold-text {
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+/* Профили */
+.profile {
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #FFD700;
+    box-shadow: 0 0 20px #FF8C00;
+}
+
+/* Фото шалаша */
+.shack-img,
+.activity-img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 16px;
+    border: 2px solid #FFD700;
+    margin: 20px 0;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+/* Видео */
+.base-video {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 16px;
+    border: 2px solid #FFD700;
+    margin: 20px 0;
+}
+
+/* Кнопки */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(145deg, #FFD700, #B8860B);
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 14px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(255, 215, 0, 0.7);
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .gold-title { font-size: 1.8rem; }
+    .gold-text { font-size: 1rem; }
+    .container { padding: 20px 15px; }
+    .btn { font-size: 1rem; padding: 12px 24px; }
+}
